@@ -16,8 +16,6 @@ inline int leftChild(int i) {
 template <typename Comparable>
 void percolateDown(vector<Comparable> &items, int& i, unsigned long& n, int& child, Comparable& tmp, int &reads, int &writes) {
     for(tmp = items[i]; leftChild(i) < n; i = child) {
-        reads++;
-        writes++;
         child = leftChild(i);
         // choose the child with the larger value
         if (child != n - 1 && items[child] < items[child + 1]) {
@@ -26,8 +24,9 @@ void percolateDown(vector<Comparable> &items, int& i, unsigned long& n, int& chi
         reads += 2;
         // if the parent is less than the child, swap them
         if (tmp < items[child]) {
+            reads += 2;
             items[i] = items[child];
-            reads += 3;
+            reads++;
             writes++;
         } else {
             reads += 2;
@@ -35,6 +34,8 @@ void percolateDown(vector<Comparable> &items, int& i, unsigned long& n, int& chi
             break;
         }
     }
+    reads++;
+    writes++;
     items[i] = tmp;
     reads++;
     writes++;

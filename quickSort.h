@@ -29,6 +29,7 @@ void quickSortStableRec(vector<Comparable> &vec, int &reads, int &writes) {
             reads++;
             writes++;
         } else {
+            reads += 2;
             equal.push_back(vec[i]);
             reads++;
             writes++;
