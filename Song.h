@@ -102,23 +102,23 @@ public:
     }
     friend bool operator == (const Song& s1, const Song & s2) {
         // Compare song index to see if they are the same song
-        return s1.index == s2.index;
+        return s1.length == s2.length;
     }
     friend bool operator < (const Song& s1, const Song & s2) {
         // Compare song index to see if index for song 1 is less than index for song 2
-        return s1.index < s2.index;
+        return s1.length < s2.length;
     }
     friend bool operator > (const Song& s1, const Song & s2) {
         // Compare song index to see if index for song 1 is greater than index for song 2
-        return s1.index > s2.index;
+        return s1.length > s2.length;
     }
     friend bool operator <= (const Song& s1, const Song & s2) {
         // Compare song index to see if index for song 1 is less than or equal to index for song 2
-        return s1.index <= s2.index;
+        return s1.length <= s2.length;
     }
     friend bool operator >= (const Song& s1, const Song & s2) {
         // Compare song index to see if index for song 1 is greater than or equal to index for song 2
-        return s1.index >= s2.index;
+        return s1.length >= s2.length;
     }
 };
 
