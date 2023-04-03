@@ -4,7 +4,7 @@
 #include "printVec.h"
 
 template<typename Comparable>
-void selectionSort(vector<Comparable> vec) {
+void selectionSort(vector<Comparable> vec, int &reads, int &writes) {
     int swapIndex, i, minIndex;
     Comparable temp;
     for (swapIndex = 0; swapIndex < vec.size()-1; ++swapIndex) {
@@ -15,11 +15,14 @@ void selectionSort(vector<Comparable> vec) {
                 // We have a new minimum
                 minIndex = i;
             }
+            reads += 2;
         }
         // Swap min value into swapIndex spot in vector
         temp = vec[swapIndex];
         vec[swapIndex] = vec[minIndex];
         vec[minIndex] = temp;
+        reads += 3;
+        writes += 3;
         // printVec(vec);
     }
 }

@@ -4,7 +4,7 @@
 #include "printVec.h"
 
 template<typename Comparable>
-void bubbleSort(vector<Comparable> vec) {
+void bubbleSort(vector<Comparable> vec, int &reads, int &writes) {
     int numPasses = 0, i;
     Comparable temp;
     bool haveSwapped = true;
@@ -16,9 +16,12 @@ void bubbleSort(vector<Comparable> vec) {
                 temp = vec[i];
                 vec[i] = vec[i+1];
                 vec[i+1] = temp;
+                reads+=3;
+                writes+=3;
                 // Update haveSwapped
                 haveSwapped = true;
             }
+            reads+=2;
         }
         // Update numPasses
         ++numPasses;
