@@ -20,7 +20,7 @@ void selectionSort(vector<Comparable> vec) {
         temp = vec[swapIndex];
         vec[swapIndex] = vec[minIndex];
         vec[minIndex] = temp;
-        printVec(vec);
+        // printVec(vec);
     }
 }
 

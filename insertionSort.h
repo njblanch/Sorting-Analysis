@@ -17,7 +17,7 @@ void insertionSort(vector<Comparable> vec) {
         }
         // Put toBeInserted back into vec
         vec[insertIndex + 1] = toBeInserted;
-        printVec(vec);
+        // printVec(vec);
     }
 }
 

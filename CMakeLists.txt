@@ -13,4 +13,4 @@ add_executable(Project4
         printVec.h
         quickSort.h
         radixSort.h
-        selectionSort.h main.cpp)
+        selectionSort.h main.cpp Song.h)

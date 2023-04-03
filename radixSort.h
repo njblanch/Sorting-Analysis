@@ -23,7 +23,7 @@ void radixSort(vector<int> vec, int numDigits) {
             }
             buckets[bucket].clear();
         }
-        printVec(vec);
+        // printVec(vec);
     }
 }
 

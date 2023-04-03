@@ -33,7 +33,7 @@ void quickSortUnstableRec(vector<Comparable> &vec, int startIndex, int endIndex)
     vec[startIndex] = vec[largerElementIndex-1];
     vec[largerElementIndex-1] = temp;
 
-    printVec(vec);
+    // printVec(vec);
 
     // Recursive calls for two halves
     quickSortUnstableRec(vec, startIndex, largerElementIndex-2);
@@ -83,7 +83,7 @@ void quickSortStableRec(vector<Comparable> &vec) {
         }
     }
 
-    printVec(vec);
+    // printVec(vec);
 }
 
 template<typename Comparable>
