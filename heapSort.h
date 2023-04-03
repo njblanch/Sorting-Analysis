@@ -70,4 +70,33 @@ vector<Comparable> heapSort(vector<Comparable> items, int &reads, int &writes) {
     return items;
 }
 
+template <typename Comparable>
+vector<Comparable> heapSortReference(vector<Comparable> &items, int &reads, int &writes) {
+    int i, child;
+    Comparable temp, tmp;
+    unsigned long j, n;
+    // build the heap (with max value at root)
+    for (i = items.size() / 2 - 1; i >= 0; --i) {
+        n = items.size();
+        percolateDown(items, i, n, child, tmp, reads, writes);
+    }
+    // printVec(items);
+    // keep deleting the max
+    for (j = items.size() - 1; j > 0; --j) {
+        // swap the maximum out
+        temp = items[0];
+        items[0] = items[j];
+        items[j] = temp;
+        reads += 3;
+        writes += 3;
+
+        // make it into a heap again
+        i = 0;
+        percolateDown(items, i, j, child, tmp, reads, writes);
+
+        // printVec(items);
+    }
+    return items;
+}
+
 #endif

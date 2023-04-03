@@ -51,6 +51,7 @@ Include the following in this section of your README.md file:
 
 **Note: Any code that was not authored by yourself or the instructor must be cited in your report. This includes the use of concepts not taught in lecture.**
 https://www.geeksforgeeks.org/measure-execution-time-function-cpp/
+https://www.techiedelight.com/copy-vector-cpp/
 
 ## Submit
 You must include your source (all .cpp and .h) files, your data (.csv) file(s), CMakeLists.txt, and your updated README.md file that contains your report to your repository. Submit to Gradescope using the GitHub repository link, double-check that all the correct files are there, and wait for the autograder to provide feedback.
