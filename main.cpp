@@ -24,7 +24,7 @@ int main() {
 
     // Open output file
     ofstream outfile;
-    outfile.open("../algorithm-results.csv");
+    outfile.open("../data/algorithm-results.csv");
     outfile << "Size,Bubble Sort Reads,Bubble Sort Writes,Bubble Sort Time,"
                "Heap Sort Reads,Heap Sort Writes,Heap Sort Time,"
                "Insertion Sort Reads,Insertion Sort Writes,Insertion Sort Time,"
