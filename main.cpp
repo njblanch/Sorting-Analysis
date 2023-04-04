@@ -43,7 +43,7 @@ int main() {
         reads = 0;
         writes = 0;
         // Bubble sort
-        auto t1 = high_resolution_clock::now();
+        auto t1 = high_resolution_clock::now(); // Found at https://www.geeksforgeeks.org/measure-execution-time-function-cpp/
         bubbleSort(songVector, reads, writes);
         auto t2 = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(t2 - t1);
